@@ -1,5 +1,5 @@
 <script>
-  import { Modals, openModal, closeModal } from "yasp-modals";
+  import { Modals, openModal, closeModal } from "../../../src/index.js";
   import MySimpleModal from "../../components/MySimpleModal.svelte";
 
   function onClick() {

@@ -58,7 +58,7 @@
     if ($modal) {
     }
 
-    is_open = !!modal;
+    is_open = !!$modal;
   }
 
   $: mergeOptions(options);

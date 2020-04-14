@@ -5,7 +5,7 @@ Modals wrapper for Svelte3
 ## Features
 
 - No top-level Modals context
-- Open/close modal with exported function
+- open and close modals easily with a function
 - No crazy boilerplate
 
 ## Installing
@@ -14,7 +14,7 @@ Modals wrapper for Svelte3
 
 ## Very quick example
 
-View live there : https://svelte.dev/repl/59f64208d7584e918749ddc4c6094af6?version=3.20.1
+View live there : https://svelte.dev/repl/1dde32baa79d4d80a9d30937c5cf48f8?version=3.20.1
 
 ```html
 <!-- App.svelte -->
@@ -136,7 +136,7 @@ emitter
 
 ### `openModal(component:SvelteComponent, props?:object)`
 
-Allow you to set default values for all routers.
+Opens a Modal
 
 - `component` - the component to add to the Modal wrapper
 - `props`: object (default: {}) - props to pass to the component
@@ -145,7 +145,7 @@ Allow you to set default values for all routers.
 
 ### `closeModal()`
 
-closes the current modal
+Closes the current modal
 
 ### emitter
 

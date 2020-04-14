@@ -23,9 +23,6 @@
       left: 0;
       width: 100%;
       height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       z-index: 100;
 			background-color: rgba(0, 0, 0, .5);
 		`
@@ -56,8 +53,16 @@
     };
   }
 
+  let is_open = false;
+  function modalChanged($modal) {
+    if ($modal) {
+    }
+
+    is_open = !!modal;
+  }
+
   $: mergeOptions(options);
-  $: is_open = !!$modals;
+  $: modalChanged($modals);
 
   function onClickOutside(e) {
     if (close.onClickOutside && this === e.originalTarget) {

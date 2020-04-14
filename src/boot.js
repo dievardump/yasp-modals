@@ -3,10 +3,11 @@ import EventEmitter from 'eventemitter3';
 
 const { subscribe, update, set } = writable(null);
 
-function openModal(component, props = {}) {
+function openModal(component, props = {}, wrapperOptions = null) {
   set({
     component,
     props,
+    wrapperOptions,
   });
 
   emitter.emit('open', {

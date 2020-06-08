@@ -65,7 +65,7 @@
   $: modalChanged($modals);
 
   function onClickOutside(e) {
-    if (close.onClickOutside && this === e.originalTarget) {
+    if (close.onClickOutside && this === e.target) {
       closeModal();
     }
   }

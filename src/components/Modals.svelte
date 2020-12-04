@@ -1,19 +1,19 @@
 <script>
-  import { fade } from "svelte/transition";
-  import { modals, openModal, closeModal } from "../boot";
+  import { fade } from 'svelte/transition';
+  import { modals, openModal, closeModal } from '../boot';
 
   export let options = {};
 
   const defaultClose = {
     showBtn: true,
-    btnText: "close",
+    btnText: 'close',
     onClickOutside: true,
-    onEscKey: true
+    onEscKey: true,
   };
 
   const defaultTransition = {
     type: fade,
-    props: {}
+    props: {},
   };
 
   const defaultProps = {
@@ -25,7 +25,7 @@
       height: 100%;
       z-index: 100;
 			background-color: rgba(0, 0, 0, .5);
-		`
+		`,
   };
 
   let close = {};
@@ -36,12 +36,12 @@
   function mergeOptions(options) {
     close = {
       ...defaultClose,
-      ...(options.close || {})
+      ...(options.close || {}),
     };
 
     let transition = {
       ...defaultTransition,
-      ...(options.transition || {})
+      ...(options.transition || {}),
     };
 
     transitionType = transition.type;
@@ -49,7 +49,7 @@
 
     props = {
       ...defaultProps,
-      ...(options.props || {})
+      ...(options.props || {}),
     };
   }
 
@@ -70,9 +70,9 @@
     }
   }
 
-  const onKeyUp = e => {
+  const onKeyUp = (e) => {
     if (is_open) {
-      if (e.key === "Escape" && defaultClose.onEscKey) {
+      if (e.key === 'Escape' && defaultClose.onEscKey) {
         onClose(e);
       }
     }
@@ -101,7 +101,7 @@
     class="modals"
     on:click={onClickOutside}
     transition:transitionType={transitionProps}
-    {...defaultProps}>
+    {...props}>
     {#if close.showBtn}
       <button class="modals__close" on:click={onClose}>{close.btnText}</button>
     {/if}

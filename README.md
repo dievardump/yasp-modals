@@ -130,9 +130,11 @@ emitter
   - `transition`
     - `type`: svelte/transition (default: fade) - the transition type for wrapper appearance
     - `props`: object (default: {}) - the transition properties
-  - `style`: string (default: see `src/components/Modals.svelte`) - the style to apply to the wrapper
+  - `props`: object
+    - `style`: string (default: see `src/components/Modals.svelte`) - the style to apply to the wrapper
+    -  all properties in this object will be passed as attributes using `{...props}` to the wrapper element
 
-> all other properties will be passed using `{...props}` to the wrapper
+
 
 ### `openModal(component:SvelteComponent, props?:object)`
 

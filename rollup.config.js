@@ -15,7 +15,7 @@ export default {
     { file: pkg.main, format: 'cjs' },
   ],
   plugins: [
-    svelte({ dev: !isProd, emitCss: false }),
+    svelte({ emitCss: false }),
     isProd &&
       babel({
         extensions: ['.js', '.mjs', '.jsx', '.html', '.svelte'],
@@ -40,7 +40,7 @@ export default {
           ],
         ],
       }),
-    resolve(),
+    resolve({ browser: true }),
     commonjs({ include: /node_modules/ }),
     isProd &&
       terser({

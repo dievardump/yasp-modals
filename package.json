@@ -3,7 +3,6 @@
     "version": "1.0.5",
     "description": "Yet Another Svelte Package: Modals",
     "svelte": "src/index.js",
-    "private": true,
     "scripts": {
         "build": "rollup -c",
         "autobuild": "rollup -c -w",

@@ -15,7 +15,7 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "prepublishOnly": "cross-env NODE_ENV=production npm run build",
-    "test": "echo \"No tests set for the moment\""
+    "release": "np --no-2fa --no-tests"
   },
   "keywords": [
     "svelte",
@@ -32,6 +32,7 @@
     "@babel/preset-env": "^7.11.0",
     "core-js": "^3.6.5",
     "cross-env": "^7.0.2",
+    "np": "^7.5.0",
     "rollup": "^2.26.5",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",

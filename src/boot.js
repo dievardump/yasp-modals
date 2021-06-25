@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
-import EventEmitter from 'eventemitter3';
+import EventEmitter from './emitter';
 
 const { subscribe, update, set } = writable(null);
 

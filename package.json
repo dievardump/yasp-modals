@@ -1,6 +1,6 @@
 {
     "name": "yasp-modals",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Yet Another Svelte Package: Modals",
     "svelte": "src/index.js",
     "scripts": {

@@ -34,11 +34,21 @@
         "sirv-cli": "^1.0.11",
         "svelte": "^3.38.2"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dievardump/yasp-modals.git"
+    },
     "keywords": [
         "svelte",
         "component",
         "template"
     ],
+    "author": "Simon Fremaux / dievardump",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/dievardump/yasp-modals/issues"
+    },
+    "homepage": "https://github.com/dievardump/yasp-modals#README",
     "files": [
         "src"
     ],
